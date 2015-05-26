@@ -1,24 +1,30 @@
 from django.shortcuts import render
+from django.template import RequestContext, loader
+from .models import Users, Requests, Articles, Content
 from django.http import HttpResponse
 
 # Create your views here.
 
 def home(request):
-	return HttpResponse("Hello guys. This is our home page.")
+	template = loader.get_template('home.html')
+	return HttpResponse(template.render())
 
 def article(request, article_id):
-	response = "Hello guys. This is the page for article %s"
-	return HttpResponse(response % article_id)
+	template = loader.get_template('article.html')  
+	return HttpResponse(template.render())
 
 def Create(request, user_id):
-	return HttpResponse("Hello guys. This is where we create actual articles for our wiki")
+	template = loader.get_template('create.html')
+	return HttpResponse(template.render())
 
 def disambiguation(request):
-	return HttpResponse("Hello guys. If you see this, it means your search was unsuccesfull")
-
+	template = loader.get_template('disambiguation.html')	
+	return HttpResponse(template.render())
+	
 def profile(request, user_id):
-	response = "Hello guys. This is the profile page for user number %s"
-	return HttpResponse(response % user_id)
+	template = loader.get_template('profile.html')
+	return HttpResponse(template.render())
 
 def signup_login(request):
-	return HttpResponse("Hello guys. This is our home page.")
+	template = loader.get_template('signup_login.html')
+	return HttpResponse(template.render())
