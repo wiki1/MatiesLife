@@ -1,0 +1,58 @@
+<!--
+	Author: Orielle Gomes
+    Date: 20/05/2015
+	Description: This homepage template inherits (extends) from base html
+-->
+
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block styles %}
+  <style>
+    body 
+      {
+	      background: url('{% static "images/product.jpg" %}') no-repeat center center fixed;
+	      -webkit-background-size: cover;
+	      -moz-background-size: cover;
+	      -o-background-size: cover;
+	      background-size: cover;
+      }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div class="jumbotron"  style='background-color: white;'>
+    <div class="container">
+      <div class='col-sm-6'>
+        <h1>Milkshake Competition</h1>
+        <p>Get your friends to sign up to win awesome rewards!</p>
+        <p><a class="btn btn-default btn-lg btn-block" href='#signup' role="button">Sign up below &raquo;</a></p>
+      </div>
+      <div class='col-sm-6'>
+        <img src="{% static 'images/logo.jpg' %}" class='img-responsive' />
+      </div>
+    </div>
+  </div>
+  <div class='container' style='text-align:center;color:black;' id="signup" align='center' >
+    <div class='col-sm-6 col-sm-offset-3' align='center'>
+      <img src="{% static 'icons/key.png' %}" class='img-responsive'>
+      <h1>Sign up / Sign in</h1>
+      <form class='form-horizontal' method="POST" action=""> {% csrf_token %}
+        <div class='form-group form-group-lg'>
+          {% if form.email.errors %}
+          {% for err in form.email.errors %}
+          <div class="alert alert-danger" role="alert">{{ err }}</div>
+          {% endfor %}
+          {% endif %}
+          <div class="input-group">
+            <input class='form-control' type="email" name="email" placeholder="Your email..." />
+              <span class='input-group-btn'>
+                <input type='submit' value='Join' class='btn btn-primary btn-lg' />
+              </span>
+          </div>
+        </div>
+      </form>
+      <p class='lead'>Welcome<br/> Get First News on Content</p>
+    </div>
+  </div>
+{% endblock %}
