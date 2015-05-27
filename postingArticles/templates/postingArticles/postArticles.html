@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>post article</title>
+	<!-- <script type="text/javascript">
+		function drawItem()
+		{
+			document.write("<input type='text' name='title' id='title' value='title' />")
+			document.write("<br />")
+			document.write("<textarea name='paragraph' id='paragraph'></textarea>")
+		}
+	</script> -->
+</head>
+<body>
+	<form action="{% url 'postingArticles:addItems' articles.id%}" method="post">
+		{% csrf_token %}
+		<label for="title">Enter your title</label>
+		<input type="text" name="title" id="title" value="{{ articles.title }}" />
+		<br />
+		<label for="heading">Enter your heading</label>
+		<input type="heading" name="heading" id="heading" value="{{ contents.heading }}" />
+		<br />
+		<label for="paragraph">Enter your paragraph</label>
+		<textarea name="paragraph" id="paragraph" placeholder="{{ contents.paragraph }}"></textarea>
+		<br />
+		<input type="submit" value="save paragraph" />
+	</form>
+
+
+	
+	{% for contents in article.contents_set.all %}
+		<h2>Heading: {{ contents.heading }}</h2>
+		<p>Paragraph: {{ contents.paragraph }}</p>
+		<input type="submit" value="edit" />
+		<br />
+	{% endfor %}
+	
+</body>
+</html>

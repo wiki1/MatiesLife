@@ -1,0 +1,14 @@
+li a {
+    color: yellow;
+    font: underline;
+}
+
+li a:hover{
+    color: yellow;
+}
+
+body {
+    background: white url("images/background.jpg") no-repeat;
+}
+
+
