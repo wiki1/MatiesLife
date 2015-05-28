@@ -1,0 +1,14 @@
+<!DOCTYPE = html>
+<html>
+	<head>
+		<title>Search Results</title>
+	</head>
+
+	<body>
+		<h1>Resuilts:</h1>
+		{% for article in search_articles %}
+			<li> {{ article }}</li>
+		{% endfor %}
+	</body>
+</html>
+
