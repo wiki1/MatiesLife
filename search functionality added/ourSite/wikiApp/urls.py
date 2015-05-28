@@ -9,6 +9,5 @@ urlpatterns = [
     url(r'^disambiguation/$', views.disambiguation, name = 'disambiguation'),
     url(r'^search/$', views.Search, name = 'Search'),
     url(r'^profile/(?P<user_id>[0-9]+)/$', views.profile, name = 'profile'),
-    url(r'^login/$', views.loginView, name = 'login'),
-    url(r'^loggedIn/$', views.loggedIn, name='loggedIn'),
+    url(r'^signup_login/$', views.signup_login, name = 'signup_login'),
 ]

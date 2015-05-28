@@ -1,0 +1,336 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"right",
+				"margin-right"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"b",
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"f",
+				"float"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"mi",
+				"min"
+			],
+			[
+				"ref",
+				"ref_url"
+			],
+			[
+				"obj",
+				"objects"
+			],
+			[
+				"rel",
+				"related_name"
+			],
+			[
+				"con",
+				"context"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"get",
+				"get_ref_id"
+			],
+			[
+				"new",
+				"new_join_old"
+			],
+			[
+				"for",
+				"forms"
+			],
+			[
+				"fo",
+				"forms"
+			],
+			[
+				"ip",
+				"ip_address"
+			],
+			[
+				"Join",
+				"JoinAdmin"
+			],
+			[
+				"sty",
+				"style"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/orielle/Documents/DummyDesign/Templates/signup",
+		"/home/orielle/Documents/DummyDesign/Templates/profile",
+		"/home/orielle/Documents/DummyDesign/Templates/disambiguation",
+		"/home/orielle/Documents/DummyDesign/Templates/article",
+		"/home/orielle/Documents/DummyDesign/Templates/create",
+		"/home/orielle/Documents/DummyDesign/Templates/home",
+		"/home/orielle/Documents/DummyDesign/CSS/bootstrap.min.css",
+		"/home/orielle/Documents/DummyDesign/CSS/full.css",
+		"/home/orielle/Documents/DummyDesign/CSS/bootstrap.min (copy).css",
+		"/home/orielle/Documents/DummyDesign/Javascript/jquery.min.js",
+		"/home/orielle/Documents/DummyDesign/CSS/full (copy).css",
+		"/home/orielle/Documents/DummyDesign/CSS/navbar.min.css",
+		"/home/orielle/Documents/DummyDesign/HomePage/Css/bootstrap.min.css",
+		"/home/orielle/Documents/DummyDesign/HomePage/Css/cover.css",
+		"/home/orielle/Documents/DummyDesign/HomePage/Template/HomePage.html",
+		"/home/orielle/Documents/DummyDesign/topnavbar/Templates/topnavbar.html",
+		"/home/orielle/Documents/DummyDesign/topnavbar/Css/bootstrap.min.css",
+		"/home/orielle/Documents/DummyDesign/topnavbar/Css/carousel.css",
+		"/home/orielle/Documents/GroupProject/ourSite/wikiApp/templates/disambiguation.html",
+		"/home/orielle/Documents/GroupProjectFork/ourSite/wikiApp/templates/disambiguation.html",
+		"/home/orielle/Documents/GroupProjectFork/ourSite/wikiApp/templates/create.html",
+		"/home/orielle/Documents/GroupProjectFork/ourSite/wikiApp/templates/article.html",
+		"/home/orielle/Documents/DummyDesign/Templates/carousel.html",
+		"/home/orielle/Documents/GroupProjectFork/ourSite/wikiApp/templates/home.html",
+		"/home/orielle/Documents/GroupProjectFork/ourSite/wikiApp/templates/profile.html",
+		"/home/orielle/Documents/GroupProjectFork/ourSite/wikiApp/templates/signup_login.html",
+		"/home/orielle/Documents/DummyDesign/Css/carousel.css",
+		"/home/orielle/Documents/DummyDesign/Css/bootstrap.min.css",
+		"/home/orielle/Documents/DummyDesign/Javascript/ie-emulation-modes-warning.js",
+		"/home/orielle/Documents/DummyDesign/Javascript/bootstrap.min.js",
+		"/home/orielle/Documents/Templates/carousel.html",
+		"/home/orielle/Documents/GroupProject/ISM/ISM/functional_tests.py",
+		"/home/orielle/Documents/GroupProject/functional_tests.py",
+		"/home/orielle/Documents/GroupProject/Untitled Document",
+		"/home/orielle/Documents/IndividualProject/src/Milkshakes/urls.py",
+		"/home/orielle/Documents/IndividualProject/src/joinmech/views.py",
+		"/home/orielle/Documents/IndividualProject/src/joinmech/models.py",
+		"/home/orielle/Documents/IndividualProject/src/Milkshakes/templates/home.html",
+		"/home/orielle/Documents/IndividualProject/src/Milkshakes/settings.py",
+		"/home/orielle/Documents/IndividualProject/src/Milkshakes/templates/navbar.html",
+		"/home/orielle/Documents/IndividualProject/src/Milkshakes/templates/share.html",
+		"/home/orielle/Documents/IndividualProject/src/Milkshakes/templates/base.html",
+		"/home/orielle/Documents/IndividualProject/src/Milkshakes/middleware.py",
+		"/home/orielle/Documents/IndividualProject/src/joinmech/admin.py",
+		"/home/orielle/Documents/IndividualProject/src/joinmech/forms.py",
+		"/home/orielle/Documents/IndividualProject/src/Milkshakes/views.py",
+		"/home/orielle/Documents/IndividualProject/src/Milkshakes/__init__.py",
+		"/home/orielle/Documents/IndividualProject/Milkshakes/Milkshakes/urls.py",
+		"/home/orielle/Documents/IndividualProject/Milkshakes/Milkshakes/settings.py"
+	],
+	"find":
+	{
+		"height": 56.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".navbar-nav>.open>a:hover{color",
+			".navbar-nav>li{f",
+			"nav.navbar-fixed-top",
+			"a:hover{text-decoration:none;background-color",
+			"white;",
+			"#337AB7",
+			"#23527C",
+			".navbar-nav>li>a{padd",
+			"navbar-inverse",
+			"border-color:#080808",
+			"min-height:50px",
+			".nav>li{pos",
+			"navbar-nav",
+			"fixed-top",
+			"navbar-bottom-collapse.collaps",
+			"navbar",
+			"position:fixed",
+			".navbar-nav{",
+			"src",
+			".masthead-nav > .active > a, .masthead-nav > .active > a:hover, .masthead-nav > .active > a:focus",
+			"position",
+			".mastfoot { ",
+			".masthead, .mastfoot, .cover-container",
+			"navbar",
+			"navba",
+			"caret{b",
+			"caret",
+			".masthead-nav",
+			".masthead",
+			".navbar-wrapper .navbar",
+			".caret{displa",
+			".navbar-nav{flo",
+			".navbar-wrapper.navbar",
+			".navbar-nav>li>a{padd",
+			".navbar-nav>li>a",
+			".nav>li>a",
+			".navbar-nav>li>",
+			".navbar-nav > li > a",
+			".navbar{position: relative;",
+			".navbar-wrapper",
+			"width",
+			".container{width",
+			".navbar-wrapper .container",
+			"ul.nav.navbar",
+			"glyphicon",
+			"glyphicon-chevron-right",
+			"glyphicon glyphicon-chevron-right",
+			"\">\"",
+			"Previous",
+			"#myCarousel",
+			"#",
+			"glyph",
+			"glyphico",
+			"src",
+			"be first",
+			"share",
+			"Rewards Include",
+			"img",
+			"height"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#333",
+			"white",
+			"navbar-inversebot",
+			"navbar-inversetop",
+			"navbar-nav2",
+			"fixed-bottom",
+			"navbar-bottom",
+			"Prize"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

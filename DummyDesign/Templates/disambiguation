@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Disambiguation</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/home/orielle/Documents/DummyDesign/CSS/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/home/orielle/Documents/DummyDesign/CSS/full.css" rel="stylesheet">
+    <link href="/home/orielle/Documents/DummyDesign/CSS/bootstrap.min.css(copy).css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar top -->
+    <nav class="navbar navbar-inversetop navbar-fixed-top" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#"><img src ="/home/orielle/Documents/DummyDesign/Icons/help.png"/></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src ="/home/orielle/Documents/DummyDesign/Icons/login.png"/><span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Enter Details:</li>
+                        <li><a href="#">Username:</a></li>
+                        <li><a href="#">Password</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src ="/home/orielle/Documents/DummyDesign/Icons/search.png"/> <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Enter Search Term:</li>
+                        <li><a href="#">Text Box</a></li>
+                      </ul>
+                    </li>
+                    </ul>
+    </nav>
+    <p><img src="/home/orielle/Documents/DummyDesign/Images/logo.png"/></p>
+    <p class = "error"> 
+        <h2 class="error">Could your search term be...</h2>
+        <ol class="error">
+            <li>Title1</li>
+            <li>Title2</li>
+            <li>Title3</li>
+            <li>Title4</li>
+            <li>Title5</li>
+        </ol>
+    </p>
+
+    <!-- Put your page content here! -->
+
+    <!-- jQuery -->
+    <script src="/home/orielle/Documents/DummyDesign/Javascript/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/home/orielle/Documents/DummyDesign/Javascript/bootstrap.min.js"></script>
+
+</body>
+
+</html>
