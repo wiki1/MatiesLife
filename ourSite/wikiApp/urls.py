@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^profile/(?P<user_id>[0-9]+)/$', views.profile, name = 'profile'),
     url(r'^login/$', views.loginView, name = 'login'),
     url(r'^loggedIn/$', views.loggedIn, name='loggedIn'),
+    url(r'^anonymousLogin/$', views.anonymousLogin, name='anonymousLogin'),
 ]

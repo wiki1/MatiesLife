@@ -1,5 +1,4 @@
 from django.shortcuts import render
-<<<<<<< HEAD
 from django.template import RequestContext, loader, Template
 from .models import Users, Requests, Articles, Content
 from .utils import generic_search
@@ -9,19 +8,21 @@ from django.template.context_processors import csrf
 from django.template import Context
 from django.views.decorators.csrf import csrf_exempt
 from .models import Users, Requests, Articles, Content
+from ipware.ip import get_ip
+from django.utils import timezone
 
 QUERY = "search-query"
 
 MODEL_MAP = { Articles: ["title"],
 
 }
-=======
+
 from django.template import RequestContext, loader
 from .models import Users, Requests, Articles, Content
 from django.http import HttpResponse
 
 # Create your views here.
->>>>>>> c01ea0e3f786b02a3ed54782dbee6813e88ce455
+
 
 def home(request):
 	template = loader.get_template('home.html')
@@ -31,7 +32,6 @@ def article(request, article_id):
 	template = loader.get_template('article.html')  
 	return HttpResponse(template.render())
 
-<<<<<<< HEAD
 @csrf_exempt
 def Search(request):
 	if request.GET:
@@ -46,24 +46,20 @@ def Search(request):
 			for word in search_list:
 				if word in title.title:
 					search_articles.append(title.title)		
-			
-
-
-			
+						
 		context_dic = Context({"search_string" : request.GET['term'],
 								"search_list" : search_list,
 								"search_articles" : search_articles,
 								"Articles" : Articles.objects.all(),
 								"resuilt_list" : resuilt_list,
 								})
-		return render (request, 'search_results.html', context_dic)
+		return render (request, 'disambiguation.html', context_dic)
 
 
 	return render (request, 'search.html')
 
 	
-=======
->>>>>>> c01ea0e3f786b02a3ed54782dbee6813e88ce455
+
 def Create(request, user_id):
 	template = loader.get_template('create.html')
 	return HttpResponse(template.render())
@@ -76,7 +72,7 @@ def profile(request, user_id):
 	template = loader.get_template('profile.html')
 	return HttpResponse(template.render())
 
-<<<<<<< HEAD
+
 #def signup_login(request):
 #	template = loader.get_template('signup_login.html')
 #	return HttpResponse(template.render())
@@ -114,8 +110,39 @@ def loggedIn(request):
 			request.session['user_id'] = 0
 	
 	return HttpResponse(myOutput)
-=======
+
 def signup_login(request):
 	template = loader.get_template('signup_login.html')
 	return HttpResponse(template.render())
->>>>>>> c01ea0e3f786b02a3ed54782dbee6813e88ce455
+
+def anonymousLogin(request):
+	logout = "<br /><a href='/wikiApp/login'>logout</a>"
+
+	if(request.session['has_loggedin'] == True):
+		currentUser = request.session['user_id']
+		myOutput = "You are already logged in as: " + str(Users.objects.get(pk=currentUser).name) + logout
+	else:
+		try:
+			ip = get_ip(request)
+			ip = str(ip)
+			
+			myOutput = "You are now logged in with your IP address: " + ip
+			myOutput += logout
+			userAlreadyExists = None
+			try:
+				userAlreadyExists = Users.objects.get(name=ip)
+			except:
+				userAlreadyExists = None 
+			
+			if userAlreadyExists == None:
+				newUser = Users(name=ip, surname=ip, user_type=0, password="0", email=ip, date_of_birth=timezone.now())
+				newUser.save()
+				request.session['has_loggedin'] = True
+				request.session['user_id'] = newUser.id
+			else:
+				request.session['has_loggedin'] = True
+				request.session['user_id'] = userAlreadyExists.id
+		except:
+			myOutput = "We don't have an IP address for user"
+
+	return HttpResponse(myOutput)

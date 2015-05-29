@@ -4,72 +4,21 @@
 <html>
 	<head>
 		<title>Disambiguation</title>
-=======
-<!DOCTYPE = html>
-<html>
-	<head>
-<<<<<<< HEAD
-		<title>home</title>
-		<link href="/home/orielle/Documents/DummyDesign/Css/bootstrap.min.css" rel="stylesheet">
-		<link href="/home/orielle/Documents/DummyDesign/Css/carousel.css" rel="stylesheet">
 	</head>
 
-	<body>
-				<div class="navbar-wrapper">
-	      	<div class="container">
-		        <nav class="navbar navbar-inverse navbar-static-top">
-		          <div class="container">
-		            <div class="navbar-header">
-		              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-		                <span class="sr-only">Toggle navigation</span>
-		                <span class="icon-bar"></span>
-		                <span class="icon-bar"></span>
-		                <span class="icon-bar"></span>
-		              </button>
-		            </div>
-		            <div id="navbar" class="navbar-collapse collapse">
-		              <ul class="nav navbar-nav">               
-		                <li class="dropdown">
-		                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src ="/home/orielle/Documents/DummyDesign/Icons/login.png"/><span class="caret"></span></a>
-		                  <ul class="dropdown-menu" role="menu">
-		                    <li><a href="#">Action</a></li>
-		                    <li><a href="#">Another action</a></li>
-		                    <li><a href="#">Something else here</a></li>
-		                    <li class="divider"></li>
-		                    <li class="dropdown-header">Nav header</li>
-		                    <li><a href="#">Separated link</a></li>
-		                    <li><a href="#">One more separated link</a></li>
-		                  </ul>
-		                  <li class="active"><a href="#">
-		                      <img src ="/home/orielle/Documents/DummyDesign/Icons/search.png"/></a></li>
-		                  <li class="active"><a href="#">
-		                      <img src ="/home/orielle/Documents/DummyDesign/Icons/help.png"/></li>
-		                  </li>
-		              </ul>
-		            </div>
-		          </div>
-		        </nav>
-	      	</div>
-    	</div>
-    	<!-- Bootstrap core JavaScript================================================== -->
-    	<!-- Placed at the end of the document so the pages load faster -->
-	    <script src="/home/orielle/Documents/DummyDesign/Javascript/jquery.min.js"></script>
-	    <script src="/home/orielle/Documents/DummyDesign/Javascript/bootstrap.min.js"></script>
-	    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-	    <script src="../../assets/js/vendor/holder.js"></script>
-	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-=======
-		<title>Search Resuilts</title>
->>>>>>> c01ea0e3f786b02a3ed54782dbee6813e88ce455
-	</head>
+		<h1>Resuilts:</h1>
+		{% for article in search_articles %}
+			{% for id in Articles%}
+				{% if article in id.title%}
+					<li><a href ="/wikiApp/article/{{id.id}}"> {{ article }}</li>
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+	
 
 	<body>
 		<h1>Hello World disambiguation</h1>
->>>>>>> 1af8abe8ce2f6e2ba0970570b48d35990cf9b2d2
 	</body>
 </html>
-<<<<<<< HEAD
 
-=======
->>>>>>> c01ea0e3f786b02a3ed54782dbee6813e88ce455
+
