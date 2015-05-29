@@ -1,4 +1,3 @@
-{% load staticfiles %}
 <!DOCTYPE html>
 <html class="full" lang="en">
 <!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
@@ -11,14 +10,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Maties Life</title>
+    <title>Sign-up / Log-in</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{% static 'admin/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="/home/orielle/Documents/DummyDesign/CSS/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{% static 'admin/css/full.css' %}" rel="stylesheet">
-    <link href="{% static 'admin/css/bootstrap.min.css(copy).css' " rel="stylesheet">
+    <link href="/home/orielle/Documents/DummyDesign/CSS/full.css" rel="stylesheet">
+    <link href="/home/orielle/Documents/DummyDesign/CSS/bootstrap.min.css(copy).css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,10 +27,7 @@
     <![endif]-->
 
 </head>
-
-<body>
-
-  <nav align='center' class="navbar navbar-inversebot navbar-fixed-bottom" role="navigation">
+    <nav align='center' class="navbar navbar-inversebot navbar-fixed-bottom" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <!-- Collect the nav links, forms, and other content for toggling -->
                 <ul class="nav navbar-nav2">
@@ -51,7 +47,6 @@
         <!-- /.container -->
     </nav>
 
-        <!-- Navigation Bar top -->
     <nav class="navbar navbar-inversetop navbar-fixed-top" role="navigation">
                 <ul class="nav navbar-nav">
                     <li>
@@ -61,8 +56,8 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src ="/home/orielle/Documents/DummyDesign/Icons/login.png"/><span class="caret"></span></a>
                       <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header">Enter Details:</li>
-                        <li><a href="#">Username:</a></li>
-                        <li><a href="#">Password</a></li>
+                        <li><a href="#">Email:</a></li>
+                        <li><a href="#">Password:</a></li>
                       </ul>
                     </li>
                     <li class="dropdown">
@@ -74,7 +69,44 @@
                     </li>
                     </ul>
     </nav>
-    <p><img src="/home/orielle/Documents/DummyDesign/Images/logo.png"/></p>
+
+    <nav class="navbar navbar-inversetop navbar-fixed-top" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#"><img src ="/home/orielle/Documents/DummyDesign/Icons/help.png"/></a>
+                    </li>
+                    <li class="dropdown">
+                        <form action="{%url 'loggedIn' %}" method="post">
+                        {% csrf_token %}
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src ="/home/orielle/Documents/DummyDesign/Icons/login.png"/><span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-header">Enter Details:</li>
+                                <li><a href="#">Email:</a></li>
+                                <input type="text" name="email" id="email" value="example@mail.com" />
+                                <li><a href="#">Password:</a></li>
+                                <input type="password" name="password" id="password" value="password" />
+                            </ul>
+                    </li>
+                </ul>
+                </nav>
+                    <p><img src="/home/orielle/Documents/DummyDesign/Images/logo.png"/></p>
+                     <p class = "form"> 
+                        Log in as guest to write an article button
+                    <p class = "form"> Static Image
+                    </p>
+                    </p>
+    <p class="profilepicture">Username | Password</p>
+    <p class = "history"> 
+        <h2 class="history">Sign-up Form goes here</h2>
+        <ol class="history">
+            <li>Name:</li>
+            <li>Surname:</li>
+            <li>Username:</li>
+            <li>Password:</li>
+            <li>Confirm Password:</li>
+        </ol>
+        <h2 class="history">Confirm button</h2>
+    </p>
     <!-- Put your page content here! -->
 
     <!-- jQuery -->
@@ -86,3 +118,4 @@
 </body>
 
 </html>
+                    

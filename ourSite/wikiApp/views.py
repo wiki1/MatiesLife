@@ -29,43 +29,40 @@ def home(request):
 	return HttpResponse(template.render())
 
 def article(request, article_id):
-	template = loader.get_template('article.html')  
-	return HttpResponse(template.render())
+	article = Articles.objects.filter(id=article_id)  
+	context_dic = ({"article" : article,
+
+					})
+	return render(request, "article.html", context_dic)
 
 @csrf_exempt
-def Search(request):
-	if request.GET:
-		search_list = {}
+def Search(request):  #this search is still case sensitive and needs fixing
+	if request.GET.get('term'):
+		search_list = []
 		search_articles = []
-		resuilt_list = {}
 
-		search_string = request.GET['term']
+		search_string = request.GET.get('term')
 		search_list = search_string.split()
 
-		for title in Articles.objects.all():
+		for article in Articles.objects.all():
 			for word in search_list:
-				if word in title.title:
-					search_articles.append(title.title)		
+				if word in article.title:
+					search_articles.append(article.title)		
 						
-		context_dic = Context({"search_string" : request.GET['term'],
+		context_dic = Context({"search_string" : request.GET.get('term'),
 								"search_list" : search_list,
 								"search_articles" : search_articles,
 								"Articles" : Articles.objects.all(),
-								"resuilt_list" : resuilt_list,
 								})
 		return render (request, 'disambiguation.html', context_dic)
 
 
-	return render (request, 'search.html')
+	return render (request, 'disambiguation.html')
 
 	
 
 def Create(request, user_id):
 	template = loader.get_template('create.html')
-	return HttpResponse(template.render())
-
-def disambiguation(request):
-	template = loader.get_template('disambiguation.html')	
 	return HttpResponse(template.render())
 	
 def profile(request, user_id):
@@ -85,6 +82,7 @@ def loginView(request):
 
 	return render(request, 'login.html')
 
+@csrf_exempt
 def loggedIn(request):
 	logout = "<br /><a href='/wikiApp/login'>Click here to logout</a>"
 	if request.session['has_loggedin'] == True:
@@ -111,10 +109,8 @@ def loggedIn(request):
 	
 	return HttpResponse(myOutput)
 
-def signup_login(request):
-	template = loader.get_template('signup_login.html')
-	return HttpResponse(template.render())
 
+@csrf_exempt
 def anonymousLogin(request):
 	logout = "<br /><a href='/wikiApp/login'>logout</a>"
 

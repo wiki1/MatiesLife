@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+</head>
+<body>
+	<form action="{%url 'loggedIn' %}" method="post">
+		{% csrf_token %}
+		<input type="text" name="email" id="email" value="example@mail.com" />
+		<label for="email">Enter your email</label>
+		<br />
+		<input type="password" name="password" id="password" value="password" />
+		<label for="password">Enter your password</label>
+		<br />
+		<input type="submit" value="login">
+	</form>
+
+	<a href="{% url 'anonymousLogin' %}"> login as anonymous user</a>
+</body>
+</html>
